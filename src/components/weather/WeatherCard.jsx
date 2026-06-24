@@ -1,6 +1,6 @@
 import { getWeatherInfo } from "../../utils/weatherCodes";
 
-export default function WeatherCard({ city, weather, convertTemp }) {
+export default function WeatherCard({ city, weather, convertTemp, isFavorite, onToggleFavorite }) {
   if (!weather) return null;
 
   const current = weather.current;
@@ -9,7 +9,22 @@ export default function WeatherCard({ city, weather, convertTemp }) {
 
   return (
     <div className="bg-white dark:bg-slate-800 rounded-3xl shadow-lg p-6 sm:p-8 mt-6 transition-colors">
-      <h2 className="text-xl sm:text-2xl font-bold">{city}</h2>
+      <div className="flex items-center justify-between gap-4">
+        <h2 className="text-xl sm:text-2xl font-bold truncate">{city}</h2>
+        {onToggleFavorite && (
+          <button
+            onClick={onToggleFavorite}
+            aria-label={isFavorite ? "Remove from favorites" : "Add to favorites"}
+            className={`flex-shrink-0 px-3 py-2 rounded-xl text-sm font-medium transition-colors ${
+              isFavorite
+                ? "bg-yellow-100 dark:bg-yellow-900 text-yellow-700 dark:text-yellow-300 hover:bg-yellow-200 dark:hover:bg-yellow-800"
+                : "bg-gray-100 dark:bg-slate-700 text-gray-600 dark:text-gray-300 hover:bg-yellow-100 dark:hover:bg-yellow-900 hover:text-yellow-600"
+            }`}
+          >
+            {isFavorite ? "★ Saved" : "☆ Save"}
+          </button>
+        )}
+      </div>
 
       <div className="mt-4">
         <div className="text-5xl sm:text-6xl">{info.icon}</div>

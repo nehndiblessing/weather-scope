@@ -16,7 +16,6 @@ import Highlights from "../components/weather/Highlights";
 import WeatherAlerts from "../components/weather/WeatherAlerts";
 import useRecentSearches from "../hooks/useRecentSearches";
 import useFavorites from "../hooks/useFavourite";
-import FavoriteButton from "../components/weather/FavouriteButton";
 import RecentSearches from "../components/weather/RecentSearches";
 import SEO from "../components/ui/SEO";
 import WeatherSkeleton from "../components/ui/WeatherSkeleton";
@@ -39,13 +38,26 @@ export default function Home() {
   const [error, setError] = useState("");
   const [airQuality, setAirQuality] = useState(null);
   const { recent, addSearch } = useRecentSearches();
-  const { addFavorite } = useFavorites();
+  const { favorites, addFavorite, removeFavorite } = useFavorites();
   const [coords, setCoords] = useState(null);
   const [showMap, setShowMap] = useState(false);
   const [showSummary, setShowSummary] = useState(false);
   const [shareMessage, setShareMessage] = useState("");
   const online = useOffline();
   const { convertTemp } = useUnit();
+  const isFavorite = city && favorites.some((f) => f.name === city);
+
+  function handleToggleFavorite() {
+    if (isFavorite) {
+      removeFavorite(city);
+    } else {
+      addFavorite({
+        name: city,
+        latitude: coords?.latitude,
+        longitude: coords?.longitude,
+      });
+    }
+  }
 
   async function handleSearch(query) {
     try {
@@ -237,20 +249,15 @@ export default function Home() {
           <FadeIn>
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
               <div className="flex-1 w-full">
-                <WeatherCard city={city} weather={weather} convertTemp={convertTemp} />
+                <WeatherCard
+                  city={city}
+                  weather={weather}
+                  convertTemp={convertTemp}
+                  isFavorite={isFavorite}
+                  onToggleFavorite={handleToggleFavorite}
+                />
               </div>
               <div className="flex gap-2 flex-shrink-0">
-                {city && (
-                  <FavoriteButton
-                    onAdd={() =>
-                      addFavorite({
-                        name: city,
-                        latitude: coords?.latitude,
-                        longitude: coords?.longitude,
-                      })
-                    }
-                  />
-                )}
                 {city && (
                   <button
                     onClick={handleShare}

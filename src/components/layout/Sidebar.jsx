@@ -7,12 +7,20 @@ export default function Sidebar() {
   return (
     <>
       {/* Desktop sidebar */}
-      <aside className="hidden sm:block w-64 bg-white dark:bg-slate-900 p-5 rounded-3xl">
-        <nav className="space-y-3">
-          <NavLink to="/">Dashboard</NavLink>
-          <NavLink to="/compare">Compare Cities</NavLink>
-          <NavLink to="/favorites">Favorites</NavLink>
-          <NavLink to="/settings">Settings</NavLink>
+      <aside className="hidden sm:block w-64 bg-white dark:bg-slate-900 p-5 rounded-3xl h-fit">
+        <nav className="flex flex-col gap-1">
+          <NavLink to="/" className={({ isActive }) => `block px-4 py-2.5 rounded-xl text-sm font-medium transition-colors ${isActive ? "bg-blue-600 text-white" : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800"}`}>
+            Dashboard
+          </NavLink>
+          <NavLink to="/compare" className={({ isActive }) => `block px-4 py-2.5 rounded-xl text-sm font-medium transition-colors ${isActive ? "bg-blue-600 text-white" : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800"}`}>
+            Compare Cities
+          </NavLink>
+          <NavLink to="/favorites" className={({ isActive }) => `block px-4 py-2.5 rounded-xl text-sm font-medium transition-colors ${isActive ? "bg-blue-600 text-white" : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800"}`}>
+            Favorites
+          </NavLink>
+          <NavLink to="/settings" className={({ isActive }) => `block px-4 py-2.5 rounded-xl text-sm font-medium transition-colors ${isActive ? "bg-blue-600 text-white" : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800"}`}>
+            Settings
+          </NavLink>
         </nav>
       </aside>
 
@@ -33,11 +41,19 @@ export default function Sidebar() {
             <button onClick={() => setMobileOpen(false)} aria-label="Close menu">✕</button>
           </div>
 
-          <nav className="flex flex-col gap-4">
-            <NavLink to="/" onClick={() => setMobileOpen(false)}>Dashboard</NavLink>
-            <NavLink to="/compare" onClick={() => setMobileOpen(false)}>Compare Cities</NavLink>
-            <NavLink to="/favorites" onClick={() => setMobileOpen(false)}>Favorites</NavLink>
-            <NavLink to="/settings" onClick={() => setMobileOpen(false)}>Settings</NavLink>
+          <nav className="flex flex-col gap-1">
+            <NavLink to="/" onClick={() => setMobileOpen(false)} className={({ isActive }) => `block px-4 py-2.5 rounded-xl text-sm font-medium transition-colors ${isActive ? "bg-blue-600 text-white" : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800"}`}>
+              Dashboard
+            </NavLink>
+            <NavLink to="/compare" onClick={() => setMobileOpen(false)} className={({ isActive }) => `block px-4 py-2.5 rounded-xl text-sm font-medium transition-colors ${isActive ? "bg-blue-600 text-white" : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800"}`}>
+              Compare Cities
+            </NavLink>
+            <NavLink to="/favorites" onClick={() => setMobileOpen(false)} className={({ isActive }) => `block px-4 py-2.5 rounded-xl text-sm font-medium transition-colors ${isActive ? "bg-blue-600 text-white" : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800"}`}>
+              Favorites
+            </NavLink>
+            <NavLink to="/settings" onClick={() => setMobileOpen(false)} className={({ isActive }) => `block px-4 py-2.5 rounded-xl text-sm font-medium transition-colors ${isActive ? "bg-blue-600 text-white" : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800"}`}>
+              Settings
+            </NavLink>
           </nav>
         </aside>
       </div>
