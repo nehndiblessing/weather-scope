@@ -5,6 +5,7 @@ import { VitePWA } from "vite-plugin-pwa";
 import { visualizer } from "rollup-plugin-visualizer";
 
 export default defineConfig(({ command }) => ({
+  base: "/Weather_scope/",
   plugins: [
     react(), 
     tailwindcss(),
