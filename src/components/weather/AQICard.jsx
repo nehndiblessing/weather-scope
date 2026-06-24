@@ -17,10 +17,11 @@ export default function AQICard({ airQuality }) {
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-xl font-bold">Air Quality</h3>
         <span
-          className="text-sm font-semibold px-3 py-1 rounded-full"
+          className="inline-flex items-center gap-1.5 text-sm font-semibold px-3 py-1 rounded-full"
           style={{ backgroundColor: status.color, color: "#fff" }}
         >
-          {status.emoji} {status.label}
+          <span className="w-2 h-2 rounded-full bg-white/80" />
+          {status.label}
         </span>
       </div>
 

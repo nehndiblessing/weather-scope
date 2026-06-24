@@ -1,3 +1,4 @@
+import { FaExclamationTriangle } from "react-icons/fa";
 import { generateAlerts } from "../../utils/weatherAlerts";
 
 export default function WeatherAlerts({ weather }) {
@@ -12,8 +13,9 @@ export default function WeatherAlerts({ weather }) {
       <h3 className="font-bold mb-3 text-orange-800 dark:text-orange-200">Weather Alerts</h3>
 
       {alerts.map((alert) => (
-        <div key={alert.message} className="mb-2 text-orange-700 dark:text-orange-300">
-          ⚠️ {alert.message}
+        <div key={alert.message} className="flex items-center gap-2 mb-2 text-orange-700 dark:text-orange-300">
+          <FaExclamationTriangle />
+          <span>{alert.message}</span>
         </div>
       ))}
     </div>

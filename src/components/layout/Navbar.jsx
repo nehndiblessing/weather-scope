@@ -1,3 +1,4 @@
+import { FaBars, FaTimes } from "react-icons/fa";
 import ThemeToggle from "../ui/ThemeToggle";
 import { useState } from "react";
 import { useUI } from "../../context/UIContext";
@@ -18,7 +19,7 @@ export default function Navbar() {
           }}
           aria-label="Toggle menu"
         >
-          {open ? "✕" : "☰"}
+          {open ? <FaTimes /> : <FaBars />}
         </button>
 
         <h1 className="text-xl sm:text-2xl font-bold truncate">

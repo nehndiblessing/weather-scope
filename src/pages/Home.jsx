@@ -1,4 +1,5 @@
 import React, { Suspense, useState, useEffect } from "react";
+import { FaCloudSun } from "react-icons/fa";
 import SearchBar from "../components/weather/SearchBar";
 import WeatherCard from "../components/weather/WeatherCard";
 
@@ -238,7 +239,7 @@ export default function Home() {
         {!loading && !weather && !error && (
           <FadeIn>
             <div className="bg-white dark:bg-slate-800 rounded-3xl shadow-lg p-8 sm:p-12 mt-6 text-center transition-colors">
-              <p className="text-5xl mb-4">🌤️</p>
+              <FaCloudSun className="text-5xl mb-4 mx-auto text-blue-500" />
               <h2 className="text-xl sm:text-2xl font-bold mb-2 dark:text-white">Welcome to WeatherScope</h2>
               <p className="text-gray-500 dark:text-gray-400">Search for a city or use your current location to get started.</p>
             </div>

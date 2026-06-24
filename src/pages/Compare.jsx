@@ -1,4 +1,5 @@
 import React, { useState, Suspense } from "react";
+import { FaCity } from "react-icons/fa";
 import { searchCity } from "../api/geocodeApi";
 import { getWeather } from "../api/weatherApi";
 import FadeIn from "../components/ui/FadeIn";
@@ -87,7 +88,7 @@ export default function Compare() {
       {!cities.length && !error && (
         <FadeIn>
           <div className="bg-white dark:bg-slate-800 rounded-3xl shadow-lg p-8 sm:p-12 text-center transition-colors">
-            <p className="text-5xl mb-4">🏙️</p>
+            <FaCity className="text-5xl mb-4 mx-auto text-gray-400" />
             <h3 className="text-xl font-bold mb-2 dark:text-white">No cities yet</h3>
             <p className="text-gray-500 dark:text-gray-400">Add cities above to compare their weather side by side.</p>
           </div>

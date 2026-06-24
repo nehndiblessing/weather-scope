@@ -1,3 +1,4 @@
+import { FaTimes } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import { useUI } from "../../context/UIContext";
 
@@ -38,7 +39,9 @@ export default function Sidebar() {
         <aside className={`absolute left-0 top-0 h-full w-72 bg-white dark:bg-slate-900 p-6 shadow-lg transform ${mobileOpen ? "translate-x-0" : "-translate-x-full"}`}>
           <div className="flex justify-between items-center mb-6">
             <h2 className="text-lg font-bold">Menu</h2>
-            <button onClick={() => setMobileOpen(false)} aria-label="Close menu">✕</button>
+            <button onClick={() => setMobileOpen(false)} aria-label="Close menu">
+              <FaTimes />
+            </button>
           </div>
 
           <nav className="flex flex-col gap-1">

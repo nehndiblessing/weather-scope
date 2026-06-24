@@ -1,3 +1,4 @@
+import { FaExclamationTriangle } from "react-icons/fa";
 import { ErrorBoundary } from "react-error-boundary";
 import { useTheme } from "../../context/ThemeContext";
 
@@ -7,7 +8,7 @@ function Fallback({ error, resetErrorBoundary }) {
   return (
     <div className="min-h-screen flex items-center justify-center p-6 bg-gray-50 dark:bg-slate-900 transition-colors">
       <div className="bg-white dark:bg-slate-800 rounded-3xl shadow-lg p-8 sm:p-12 max-w-lg w-full text-center transition-colors">
-        <p className="text-5xl mb-4">⚠️</p>
+        <FaExclamationTriangle className="text-5xl mb-4 text-amber-500 mx-auto" />
         <h2 className="text-2xl font-bold mb-2 dark:text-white">Something went wrong</h2>
         <p className="text-gray-500 dark:text-gray-400 mb-6">{error?.message || "An unexpected error occurred."}</p>
 

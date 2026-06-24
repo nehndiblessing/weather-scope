@@ -1,4 +1,6 @@
+import { FaStar, FaRegStar } from "react-icons/fa";
 import { getWeatherInfo } from "../../utils/weatherCodes";
+import WeatherIcon from "../../utils/WeatherIcon";
 
 export default function WeatherCard({ city, weather, convertTemp, isFavorite, onToggleFavorite }) {
   if (!weather) return null;
@@ -15,19 +17,20 @@ export default function WeatherCard({ city, weather, convertTemp, isFavorite, on
           <button
             onClick={onToggleFavorite}
             aria-label={isFavorite ? "Remove from favorites" : "Add to favorites"}
-            className={`flex-shrink-0 px-3 py-2 rounded-xl text-sm font-medium transition-colors ${
+            className={`flex-shrink-0 inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-sm font-medium transition-colors ${
               isFavorite
                 ? "bg-yellow-100 dark:bg-yellow-900 text-yellow-700 dark:text-yellow-300 hover:bg-yellow-200 dark:hover:bg-yellow-800"
                 : "bg-gray-100 dark:bg-slate-700 text-gray-600 dark:text-gray-300 hover:bg-yellow-100 dark:hover:bg-yellow-900 hover:text-yellow-600"
             }`}
           >
-            {isFavorite ? "★ Saved" : "☆ Save"}
+            {isFavorite ? <FaStar /> : <FaRegStar />}
+            <span>{isFavorite ? "Saved" : "Save"}</span>
           </button>
         )}
       </div>
 
       <div className="mt-4">
-        <div className="text-5xl sm:text-6xl">{info.icon}</div>
+        <WeatherIcon code={current.weather_code} />
         <p className="text-base sm:text-lg mt-2">{info.label}</p>
         <p className="text-3xl sm:text-5xl font-bold mt-3">{toTemp(current.temperature_2m)}</p>
       </div>

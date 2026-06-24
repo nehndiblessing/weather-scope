@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaCamera } from "react-icons/fa";
 
 export default function ScreenshotButton({ selector = "main", filename = "screenshot.png" }) {
   const [busy, setBusy] = useState(false);
@@ -38,7 +39,8 @@ export default function ScreenshotButton({ selector = "main", filename = "screen
       aria-label="Take screenshot"
       className="bg-gray-800 dark:bg-slate-700 hover:opacity-90 disabled:opacity-50 text-white px-3 py-2 rounded-lg text-sm transition-opacity"
     >
-      {busy ? "Capturing..." : "📸 Screenshot"}
+      <FaCamera className="inline mr-1.5" />
+      {busy ? "Capturing..." : "Screenshot"}
     </button>
   );
 }
