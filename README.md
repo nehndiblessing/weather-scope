@@ -1,154 +1,269 @@
 # WeatherScope
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![CI/CD](https://github.com/YOUR_USERNAME/weather-scope/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_USERNAME/weather-scope/actions/workflows/ci.yml)
-[![PWA](https://img.shields.io/badge/PWA-ready-brightgreen)](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)
-[![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)](https://react.dev)
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)
+![Vite](https://img.shields.io/badge/Vite-7-646CFF?logo=vite)
+![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-4-38BDF8?logo=tailwindcss)
+![PWA](https://img.shields.io/badge/PWA-Ready-brightgreen)
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
 
-A modern, feature-rich weather dashboard built with React 19, Vite, and Tailwind CSS. Real-time forecasts, air quality, interactive maps, and more — with full PWA and offline support.
-
-![WeatherScope Screenshot](./screenshots/dashboard.png)
-
----
-
-## Features
-
-### Core
-- **Current Weather** — temperature, feels like, humidity, wind, pressure, visibility
-- **7-Day Forecast** — daily highs/lows and 24-hour hourly breakdown
-- **Air Quality Index (AQI)** — live AQI, PM2.5, PM10, ozone with color-coded status
-- **City Search** — geocoding auto-complete with recent searches
-- **Current Location** — one-click weather from geolocation
-
-### Advanced
-
-| Feature | Description |
-|---|---|
-| **Interactive Maps** | Leaflet map with click-to-select location and weather popup |
-| **Weather Radar** | Toggle precipitation radar overlay on the map |
-| **Charts & Trends** | Temperature, humidity, wind speed, AQI trends, and 7-day forecast bars |
-| **City Comparison** | Compare weather side-by-side across multiple cities |
-| **Severe Weather Alerts** | Automatic detection of heat, wind, and UV warnings |
-| **AI Weather Summary** | Auto-generated natural-language summary of current conditions |
-| **Unit Conversion** | Toggle between °C and °F — persists across sessions |
-| **Export PDF** | Capture and print a full weather report as PDF |
-| **Favorites** | Save cities with prefetched weather and AQI for fast access |
-| **Dark Mode** | System-aware dark/light theme toggle |
-| **PWA** | Installable as a standalone app with offline caching via Workbox |
-| **Offline Support** | Cached API responses and map tiles for offline use |
-| **Responsive** | Mobile-first design with collapsible sidebar |
+A modern, feature-rich weather dashboard built with **React**, **Vite**, and **Tailwind CSS**. WeatherScope delivers real-time weather forecasts, air quality monitoring, interactive maps, weather analytics, and Progressive Web App (PWA) support in a clean, responsive interface.
 
 ---
 
-## Live Demo
+## 🌐 Live Demo
 
-> **🌐 [weatherscope.app](https://YOUR_USERNAME.github.io/weather-scope)** — deployed via GitHub Actions.
+**Live Website:** https://weather-scope-gilt.vercel.app/
 
-![Demo GIF](./screenshots/demo.gif)
-
----
-
-## Quick Start
-
-```bash
-git clone https://github.com/YOUR_USERNAME/weather-scope.git
-cd weather-scope
-
-npm install
-npm run dev        # dev server at http://localhost:5173
-npm run build      # production build → dist/
-npm run preview    # preview production build
-npm run lint       # run ESLint
-```
-
-### Environment
-
-Copy the example file (no API keys required by default):
-
-```bash
-cp .env.example .env
-```
-
-The app uses the free [Open-Meteo API](https://open-meteo.com/) — no registration needed.
+**GitHub Repository:** https://github.com/nehndiblessing/weather-scope
 
 ---
 
-## Screenshots
+## 📸 Screenshots
 
-| Dashboard | Compare Cities | AQI Card |
-|---|---|---|
-| ![Dashboard](./screenshots/dashboard.png) | ![Compare](./screenshots/compare.png) | ![AQI](./screenshots/aqi.png) |
-
-> **Tip:** Use the built-in **Screenshot** button in the Navbar to capture your own screenshots.
+![Dashboard A](screenshots/dashboarda.JPG)
+![Dashboard B](screenshots/dashboardb.JPG)
+![Dark Mode](screenshots/darkmode.JPG)
+![Map](screenshots/map.JPG)
+![Compare](screenshots/compare.JPG)
+![Favourites](screenshots/favourites.JPG)
 
 ---
 
-## Architecture
+# ✨ Features
 
-```
+## 🌤️ Weather
+
+* Current weather conditions
+* Feels-like temperature
+* Humidity
+* Wind speed
+* Atmospheric pressure
+* Visibility
+* UV Index
+* Sunrise & Sunset
+
+---
+
+## 📅 Forecasts
+
+* 24-Hour Forecast
+* 7-Day Forecast
+* Weather condition icons
+* Temperature trends
+
+---
+
+## 🌍 Search & Location
+
+* Search weather by city
+* Geolocation support
+* Recent searches
+* Favorite cities
+
+---
+
+## 🌫️ Air Quality
+
+* AQI (Air Quality Index)
+* PM2.5
+* PM10
+* Ozone
+* Color-coded AQI status
+
+---
+
+## 🗺️ Interactive Map
+
+* Leaflet + OpenStreetMap
+* Interactive weather map
+* Location marker
+* Map navigation
+
+---
+
+## 📊 Analytics
+
+* Temperature charts
+* Humidity charts
+* Wind trends
+* Forecast visualization
+
+---
+
+## ⚠️ Weather Alerts
+
+Automatic alerts for:
+
+* Extreme heat
+* Strong winds
+* High UV exposure
+
+---
+
+## 🎨 User Experience
+
+* Responsive design
+* Dark / Light mode
+* Smooth animations
+* Loading skeletons
+* Error boundaries
+* Shareable URLs
+
+---
+
+## 📱 Progressive Web App
+
+* Installable
+* Offline support
+* Cached weather data
+* Cached map tiles
+* Automatic updates
+
+---
+
+# 🛠️ Tech Stack
+
+### Frontend
+
+* React
+* Vite
+* JavaScript (ES6+)
+* Tailwind CSS
+
+### Routing
+
+* React Router
+
+### State Management
+
+* React Hooks
+* React Query
+
+### Charts
+
+* Recharts
+
+### Maps
+
+* Leaflet
+* React Leaflet
+
+### Animations
+
+* Framer Motion
+
+### PWA
+
+* vite-plugin-pwa
+* Workbox
+
+### APIs
+
+* Open-Meteo Weather API
+* Open-Meteo Air Quality API
+* Open-Meteo Geocoding API
+* OpenStreetMap
+
+---
+
+# 📁 Project Structure
+
+```text
 src/
-├── api/            # Centralized API layer (weather, geocode, air quality)
-├── app/            # App-level: providers, router, layout, prefetch
-├── assets/         # Static assets
-├── components/     # Reusable UI components
-│   ├── charts/     # Recharts-based charts (temp, humidity, wind, AQI, forecast)
-│   ├── layout/     # Navbar, Sidebar
-│   ├── ui/         # ThemeToggle, FadeIn, PwaUpdatePrompt, ExportPDF, etc.
-│   └── weather/    # WeatherCard, SearchBar, HourlyForecast, WeatherMap, etc.
-├── context/        # ThemeContext, UIContext
-├── hooks/          # Custom hooks (useDebounce, useCitySearch, useFavourite, etc.)
-├── pages/          # Route pages (Home, Compare, Favourites, Settings)
-└── utils/          # Utility functions (aqi, weatherCodes, weatherAlerts, weatherSummary)
+├── api/
+├── app/
+├── assets/
+├── components/
+│   ├── charts/
+│   ├── layout/
+│   ├── ui/
+│   └── weather/
+├── context/
+├── hooks/
+├── pages/
+├── utils/
+└── main.jsx
 ```
-
-### Key Libraries
-
-- **React 19** + **Vite 8** — fast dev and build
-- **Tailwind CSS 4** — utility-first styling
-- **@tanstack/react-query** — data fetching, caching, prefetching
-- **React Router** — lazy-loaded routes
-- **Recharts** — interactive charts
-- **Leaflet** + **react-leaflet** — maps
-- **Framer Motion** — animations (with CSS fallback)
-- **html2canvas** — screenshot capture
-- **vite-plugin-pwa** — PWA + service worker
 
 ---
 
-## Deployment
+# 🚀 Getting Started
 
-The included GitHub Actions workflow (`.github/workflows/ci.yml`):
+Clone the repository
 
-1. Runs `npm ci` and `npm run build` on every push/PR
-2. Deploys to GitHub Pages on pushes to `main`
+```bash
+git clone https://github.com/nehndiblessing/weather-scope.git
+```
 
-To deploy to Netlify or Vercel, point their CLI or dashboard at the `dist/` folder.
+Move into the project
+
+```bash
+cd Weather_scope
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Run the development server
+
+```bash
+npm run dev
+```
+
+Build for production
 
 ```bash
 npm run build
-npx netlify deploy --prod --dir=dist
+```
+
+Preview production build
+
+```bash
+npm run preview
 ```
 
 ---
 
-## Advanced Usage
+# 🚀 Deployment
 
-### Historical Data
+This project is deployed on **Vercel**.
 
-The Compare page allows side-by-side weather comparison. Extend it with historical data from the [Open-Meteo Historical Weather API](https://open-meteo.com/en/docs/historical-weather-api).
+Every push to the **main** branch automatically triggers a new deployment.
 
-### Weather Radar
+Live URL:
 
-Toggle **Radar ON** on the map to overlay precipitation data. Requires an [OpenWeatherMap API key](https://openweathermap.org/api) — set it in `WeatherMap.jsx`.
-
----
-
-## License
-
-[MIT](LICENSE) © 2026 WeatherScope
+https://weather-scope-gilt.vercel.app/
 
 ---
 
-## Contributing
+# 💡 Future Improvements
 
-Pull requests and issues are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines (if present).
+* Weather radar overlays
+* Historical weather data
+* Weather notifications
+* Multi-language support
+* Unit customization
+* More advanced weather insights
+
+---
+
+# 👨‍💻 Author
+
+**NDI BLESSING NEH**
+
+GitHub: https://github.com/nehndiblessing
+
+---
+
+## ⭐ Support
+
+If you found this project useful, consider giving it a ⭐ on GitHub.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
