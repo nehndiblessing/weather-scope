@@ -1,10 +1,13 @@
 # WeatherScope
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![CI/CD](https://github.com/YOUR_USERNAME/weather-scope/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_USERNAME/weather-scope/actions/workflows/ci.yml)
 [![PWA](https://img.shields.io/badge/PWA-ready-brightgreen)](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)
 [![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)](https://react.dev)
 
 A modern, feature-rich weather dashboard built with React 19, Vite, and Tailwind CSS. Real-time forecasts, air quality, interactive maps, and more — with full PWA and offline support.
+
+![WeatherScope Screenshot](./screenshots/dashboard.png)
 
 ---
 
@@ -37,6 +40,13 @@ A modern, feature-rich weather dashboard built with React 19, Vite, and Tailwind
 
 ---
 
+## Live Demo
+
+> **🌐 [weatherscope.app](https://YOUR_USERNAME.github.io/weather-scope)** — deployed via GitHub Actions.
+
+![Demo GIF](./screenshots/demo.gif)
+
+---
 
 ## Quick Start
 
@@ -63,6 +73,11 @@ The app uses the free [Open-Meteo API](https://open-meteo.com/) — no registrat
 
 ---
 
+## Screenshots
+
+| Dashboard | Compare Cities | AQI Card |
+|---|---|---|
+| ![Dashboard](./screenshots/dashboard.png) | ![Compare](./screenshots/compare.png) | ![AQI](./screenshots/aqi.png) |
 
 > **Tip:** Use the built-in **Screenshot** button in the Navbar to capture your own screenshots.
 
